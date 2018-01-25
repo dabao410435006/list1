@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">list</string>
+    <string-array name="menu">
+        <item>NIKE五折</item>
+        <item>NIKE五折</item>
+        <item>NIKE五折</item>
+        <item>NIKE五折</item>
+    </string-array>
+    <string-array name="item">
+        <item>交友</item>
+        <item>大樹</item>
+        <item>鞋子</item>
+        <item>豬</item>
+    </string-array>
+
+</resources>
