@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.user_view,
             R.drawable.user_person
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         // 在viewpager增加區塊
         adapter.addFragment(new Fragment1(), "首頁");
+
         adapter.addFragment(new Fragment2(), "收藏");
         adapter.addFragment(new Fragment3(), "查看物件");
         adapter.addFragment(new Fragment4(), "個人資料");
+
         viewPager.setAdapter(adapter);
+
 
 
         //讓tablayout與viewpager連動
@@ -72,15 +77,20 @@ public class MainActivity extends AppCompatActivity {
         }
         //增加區塊
         public void addFragment(Fragment fragment, String title) {
+
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
+
+
 
 
         }
 
         @Override
-        public CharSequence getPageTitle(int position) {
+        public CharSequence getPageTitle( int position) {
+
             return mFragmentTitleList.get(position);
         }
     }
+
 }
